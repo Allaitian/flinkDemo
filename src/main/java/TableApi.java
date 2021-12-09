@@ -7,7 +7,12 @@ public class TableApi {
 
 // Create a TableEnvironment for batch or streaming execution.
 // See the "Create a TableEnvironment" section for details.
-        TableEnvironment tableEnv = TableEnvironment.create(/*…*/);
+        EnvironmentSettings settings = EnvironmentSettings
+                .newInstance()
+                .inStreamingMode()
+                //.inBatchMode()
+                .build();
+        TableEnvironment tableEnv = TableEnvironment.create(settings);
 
 // Create a source table
         tableEnv.createTemporaryTable("SourceTable", TableDescriptor.forConnector("datagen")
@@ -28,5 +33,8 @@ public class TableApi {
 
 // Emit a Table API result Table to a TableSink, same for SQL result
         TableResult tableResult = table2.executeInsert("SinkTable");
+        tableResult.print();
+
+
     }
 }

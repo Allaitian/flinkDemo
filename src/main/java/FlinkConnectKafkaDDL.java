@@ -1,3 +1,4 @@
+import org.apache.flink.api.common.RuntimeExecutionMode;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.EnvironmentSettings;
@@ -11,7 +12,7 @@ public class FlinkConnectKafkaDDL {
 
         // 1.准备环境
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-
+//        env.setRuntimeMode(RuntimeExecutionMode.BATCH);
         // 2.创建TableEnvironment
         EnvironmentSettings settings = EnvironmentSettings.newInstance().inStreamingMode().build();
         StreamTableEnvironment tableEnvironment = StreamTableEnvironment.create(env , settings);

@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5fe93c8-b822-4380-b4e6-881023408117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/FlinkClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TableApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/UserMovie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sql/parser/SqlParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/hbase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TableApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TableApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/doris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/doris.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/es.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/es.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/hadoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/hadoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/hbase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/kafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/kafka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/mongo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/mongo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/mysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/mysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/redis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/redis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/KafkaMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/KafkaMessageGenerator.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +64,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KafkaMessageGenerator">
+  <component name="RunManager" selected="Application.SqlParser">
     <configuration name="FlinkConnectKafkaDDL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FlinkConnectKafkaDDL" />
       <module name="FlinkDemo" />
@@ -68,8 +79,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SqlParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sql.parser.SqlParser" />
+      <module name="FlinkDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sql.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TableApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TableApi" />
+      <module name="FlinkDemo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SqlParser" />
+        <item itemvalue="Application.TableApi" />
         <item itemvalue="Application.FlinkConnectKafkaDDL" />
         <item itemvalue="Application.KafkaMessageGenerator" />
       </list>
@@ -97,7 +130,7 @@
       <workItem from="1638710794665" duration="33000" />
       <workItem from="1638710843215" duration="1766000" />
       <workItem from="1638790561465" duration="1701000" />
-      <workItem from="1638838906679" duration="3591000" />
+      <workItem from="1638838906679" duration="8104000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1638790134386</created>
@@ -113,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638790851630</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="初始化">
+      <created>1638882390129</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638882390129</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
