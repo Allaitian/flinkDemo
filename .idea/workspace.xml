@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5fe93c8-b822-4380-b4e6-881023408117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/UserMovie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sql/parser/SqlParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/hbase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TableApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TableApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/doris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/doris.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/es.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/es.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/hadoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/hadoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/hbase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/kafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/kafka.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/mongo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/mongo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/mysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/mysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/redis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/redis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/KafkaMessageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/KafkaMessageGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/hbase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/hbase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -161,6 +152,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
+    <MESSAGE value="flinksql读取hbase优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="flinksql读取hbase优化" />
   </component>
 </project>
