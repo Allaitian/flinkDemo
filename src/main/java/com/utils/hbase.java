@@ -75,7 +75,7 @@ public class hbase {
 //        tableResult.print();
 
         // 相当于 scan
-        Table table = tableEnv.sqlQuery("SELECT * FROM u_m");
+        Table table = tableEnv.sqlQuery("SELECT rowkey , u_m_r.r FROM u_m");
 //                tableEnv.executeSql("SELECT * FROM u_m").print();
         tableEnv.createTemporaryView("hbase_table", table);
         // 查询的结果
@@ -84,7 +84,7 @@ public class hbase {
         CloseableIterator<Row> collect = executeResult.collect();
 
         // 输出 (执行print或者下面的 Consumer之后，数据就被消费了。两个只能留下一个)
-//                executeResult.print();
+                executeResult.print();
 
         List<UserMovie> userMovieList = new ArrayList<>();
 
@@ -96,7 +96,9 @@ public class hbase {
                 String field0 = String.valueOf(row.getField(0));
                 String[] user_movie = field0.split(",");
                 // Double.valueOf  String.valueOf 这些都是要判断是不是非空的
-                Double ratting = Double.valueOf(String.valueOf(((Row) row.getField(1)).getField(0)));
+                // String.valueOf(((Row) row.getField(1)).getField(0))的原因是因为用了select * 而不是具体的
+//                Double ratting = Double.valueOf(String.valueOf(((Row) row.getField(1)).getField(0)));
+                Double ratting = Double.valueOf(String.valueOf( row.getField(1)));
                 userMovieList.add(new UserMovie(user_movie[0], user_movie[1], ratting));
             }
         });

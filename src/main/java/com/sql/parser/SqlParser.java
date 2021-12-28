@@ -6,6 +6,7 @@ import com.alibaba.druid.sql.ast.SQLStatement;
 import com.alibaba.druid.sql.dialect.mysql.visitor.MySqlSchemaStatVisitor;
 import com.alibaba.druid.stat.TableStat;
 import com.alibaba.druid.util.JdbcConstants;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 
@@ -27,45 +28,38 @@ public class SqlParser {
                 "     (select order_id,max(update_time) as update_time from dwd.order_repay group by order_id) b\n" +
                 "     on a.order_id=b.order_id and a.update_time=b.update_time ) t1\n" +
                 "    group by user_id";
-        final List<String> tableNameBySql = getTableNameBySql(sql);
-        for (String s : tableNameBySql) {
-            System.out.println(s);
-        }
+        String tableNameBySql = getTableNameBySql(sql);
+        System.out.println(tableNameBySql);
     }
 
-    private static List<String> getTableNameBySql(String sql) {
-        DbType dbType = JdbcConstants.MYSQL;
+    private static String getTableNameBySql(String sql) {
+        DbType dbType = JdbcConstants.HIVE;
+        JSONObject jsonObject = new JSONObject();
         try {
-            List<String> tableNameList = new ArrayList<>();
-            //格式化输出
-//            String sqlResult = SQLUtils.format(sql, dbType);
-//            logger.info("格式化后的sql:[{}]",sqlResult);
-
+            //格式化输出 sql语句
             List<SQLStatement> stmtList = SQLUtils.parseStatements(sql, dbType);
-            if (CollectionUtils.isEmpty(stmtList)) {
+            if (stmtList.isEmpty()) {
 //                logger.info("stmtList为空无需获取");
-                return Collections.emptyList();
+                throw new Exception("输入的SQL不存在HIVE表");
             }
-            for (SQLStatement sqlStatement : stmtList) {
-                MySqlSchemaStatVisitor visitor = new MySqlSchemaStatVisitor();
-                sqlStatement.accept(visitor);
-                Map<TableStat.Name, TableStat> tables = visitor.getTables();
-//                logger.info("druid解析sql的结果集:[{}]",tables);
-                Set<TableStat.Name> tableNameSet = tables.keySet();
-                for (TableStat.Name name : tableNameSet) {
-                    String tableName = name.getName();
-                    if (StringUtils.isNotBlank(tableName)) {
-                        tableNameList.add(tableName);
-                    }
-                }
+            if (stmtList.size() != 1) {
+                throw new Exception("输入的不是一条SQL语句");
             }
-//            logger.info("解析sql后的表名:[{}]",tableNameList);
-            return tableNameList;
+            SQLStatement sqlStatement = stmtList.get(0);
+
+            MySqlSchemaStatVisitor visitor = new MySqlSchemaStatVisitor();
+            sqlStatement.accept(visitor);
+            Map<TableStat.Name, TableStat> tables = visitor.getTables();
+            for (Map.Entry<TableStat.Name, TableStat> nameTableStatEntry : tables.entrySet()) {
+                jsonObject.put(nameTableStatEntry.getKey().toString(), nameTableStatEntry.getValue().toString());
+            }
+            return jsonObject.toJSONString();
+
         } catch (Exception e) {
-//            logger.error("**************异常SQL:[{}]*****************\\n",sql);
-//            logger.error(e.getMessage(),e);
+            System.out.println(e + "输入的SQL不正确");
         }
-        return Collections.emptyList();
+
+        return "";
     }
 
 }
