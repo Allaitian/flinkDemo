@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c5fe93c8-b822-4380-b4e6-881023408117" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sql/parser/SqlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sql/parser/SqlParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/hbase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/hbase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FlinkConnectKafkaDDL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FlinkConnectKafkaDDL.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +146,7 @@
       <workItem from="1638838906679" duration="8104000" />
       <workItem from="1639622479239" duration="2596000" />
       <workItem from="1640072694534" duration="598000" />
-      <workItem from="1640228026322" duration="1996000" />
+      <workItem from="1640228026322" duration="2774000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1638790134386</created>
@@ -180,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639446769901</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="pom文件添加新配置">
+      <created>1640693830925</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640693830925</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
