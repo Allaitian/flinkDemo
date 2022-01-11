@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5fe93c8-b822-4380-b4e6-881023408117" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qeq.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +147,7 @@
       <workItem from="1638838906679" duration="8104000" />
       <workItem from="1639622479239" duration="2596000" />
       <workItem from="1640072694534" duration="598000" />
-      <workItem from="1640228026322" duration="2774000" />
+      <workItem from="1640228026322" duration="5496000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1638790134386</created>
@@ -183,11 +184,29 @@
       <option name="project" value="LOCAL" />
       <updated>1640693830925</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="pom文件添加新配置">
+      <created>1640782018071</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640782018071</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化" />
